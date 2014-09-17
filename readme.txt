@@ -14,10 +14,16 @@ And hope maketh not ashamed; because the love of God is shed abroad in our heart
 Holy Ghost which is given unto us. ." Romans 5:5
 
 ********************************************************************************
-WELCOME TO THE JAVALOADER MODULE
+WELCOME TO THE CBCOMMONS MODULE
 ********************************************************************************
 Created & copyright by Luis Majano (Ortus Solutions, Corp)
-JavaLoader created & copyright by Mark Mandel
+
+A collectin of model objects for your using pleasure:
+- DateUtils
+- FileUtils
+- JVMUtils
+- QueryHelper
+- Zip
 
 ********************************************************************************
 LICENSE
@@ -28,15 +34,14 @@ Apache License, Version 2.0.
 IMPORTANT LINKS
 ********************************************************************************
 Source
-- https://github.com/ColdBox/cbox-javaloder
-- http://www.coldbox.org/forgebox/javaloader
+- https://github.com/ColdBox/cbox-cbcommons
+- http://www.coldbox.org/forgebox/cbcommons
 
 ********************************************************************************
 SYSTEM REQUIREMENTS
 ********************************************************************************
-- Railo 3.2 and above
-- ColdFusion MX 9 and above
-- ColdBox 3.5 and above
+- Railo 4+
+- ColdFusion 9.02+
 
 ----
 

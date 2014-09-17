@@ -10,26 +10,13 @@ Description :
 	This is a query helper plugin.
 ----------------------------------------------------------------------->
 <cfcomponent hint="A query helper plugin."
-			 extends="coldbox.system.Plugin"
 			 output="false"
 			 cache="true">
 
 <!------------------------------------------- CONSTRUCTOR ------------------------------------------->
 
 	<cffunction name="init" access="public" returntype="QueryHelper" output="false">
-		<!--- ************************************************************* --->
-		<cfargument name="controller" type="any" required="true">
-		<!--- ************************************************************* --->
 		<cfscript>
-			super.init(arguments.controller);
-
-			// Plugin Properties
-			setpluginName("Query Helper");
-			setpluginVersion("1.5");
-			setpluginDescription("This is a query helper plugin");
-			setpluginAuthor("Sana Ullah");
-			setpluginAuthorURL("http://www.coldbox.org");
-
 			return this;
 		</cfscript>
 	</cffunction>
@@ -243,7 +230,7 @@ Description :
 		    }
 
 		 }catch(Any e){
-			$throw("Error in doInnerJoin():","#e.Detail#<br>#e.message#","QueryHelper.InvalidInnerJoinException");
+			throw("Error in doInnerJoin():","#e.Detail#<br>#e.message#","QueryHelper.InvalidInnerJoinException");
 		 }
 		</cfscript>
 
@@ -339,7 +326,7 @@ Description :
 		    }
 
 		 }catch(Any e){
-			$throw("Error in doLeftOuterJoin():","#e.Detail#<br>#e.message#","QueryHelper.InvalidInnerJoinException");
+			throw("Error in doLeftOuterJoin():","#e.Detail#<br>#e.message#","QueryHelper.InvalidInnerJoinException");
 		 }
 		</cfscript>
 
@@ -369,7 +356,7 @@ Description :
 	                                    );
             }
         }Catch(Any e){
-        	$throw("Error in doQueryAppend():","#e.Detail#<br>#e.message#","QueryHelper.InvalidQueryAppendException");
+        	throw("Error in doQueryAppend():","#e.Detail#<br>#e.message#","QueryHelper.InvalidQueryAppendException");
         }
            return QryReturn;
         </cfscript>
@@ -530,17 +517,17 @@ Description :
 			return theQuery;
     	</cfscript>
     </cffunction>
-    
-    <!--- queryToArrayOfStructures --->    
-    <cffunction name="queryToArrayOfStructures" output="false" access="public" returntype="array" hint="Converts a query to an array of structures">    
+
+    <!--- queryToArrayOfStructures --->
+    <cffunction name="queryToArrayOfStructures" output="false" access="public" returntype="array" hint="Converts a query to an array of structures">
     	<cfargument name="theQuery" type="query" required="true" hint="The query to convert" />
-    	<cfscript>	 
+    	<cfscript>
 			var theArray = arraynew(1);
 			var cols = listToArray( arguments.theQuery.columnlist );
 			var row = 1;
 			var thisRow = "";
 			var col = 1;
-			
+
 			for(row = 1; row LTE arguments.theQuery.recordcount; row = row + 1){
 				thisRow = {};
 				for(col = 1; col LTE arraylen( cols ); col = col + 1){
@@ -548,9 +535,9 @@ Description :
 				}
 				arrayAppend(theArray, thisRow);
 			}
-			
+
 			return theArray;
-    	</cfscript>    
+    	</cfscript>
     </cffunction>
 
 	<!--- ************************************************************************************** --->
@@ -607,7 +594,7 @@ Description :
 			return slug;
 		</cfscript>
 	</cffunction>
-	
+
 <!------------------------------------------- PRIVATE ------------------------------------------->
 
 	<!--- ********************************************************************* --->
@@ -633,7 +620,7 @@ Description :
             return sReturn;
 
          }Catch(Any e){
-			$throw("Error in getUnMatchedElements():","#e.Detail#<br>#e.message#","QueryHelper.InvalidElementLoopException");
+			throw("Error in getUnMatchedElements():","#e.Detail#<br>#e.message#","QueryHelper.InvalidElementLoopException");
 		 }
         </cfscript>
 
@@ -662,7 +649,7 @@ Description :
             return sReturn;
 
          }Catch(Any e){
-			$throw("Error in getUniqueElements():","#e.Detail#<br>#e.message#","QueryHelper.InvalidElementLoopException");
+			throw("Error in getUniqueElements():","#e.Detail#<br>#e.message#","QueryHelper.InvalidElementLoopException");
 		 }
         </cfscript>
 
@@ -696,10 +683,10 @@ Description :
 	            }
 	            // return updated query
 	            return QryReturn;
-	
+
 	          }
 	          catch(Any e){
-				$throw("Error in QrySetCell():","#e.Detail#<br>#e.message#","QueryHelper.InvalidQrySetCellException");
+				throw("Error in QrySetCell():","#e.Detail#<br>#e.message#","QueryHelper.InvalidQrySetCellException");
 			 }
         </cfscript>
 
