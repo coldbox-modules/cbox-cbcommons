@@ -11,7 +11,7 @@ Description :
 ----------------------------------------------------------------------->
 <cfcomponent hint="A query helper plugin."
 			 output="false"
-			 cache="true">
+			 singleton>
 
 <!------------------------------------------- CONSTRUCTOR ------------------------------------------->
 

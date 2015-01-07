@@ -11,3 +11,4 @@ All model objects are autowired with a `@cbcommons` namespace.
 - `JVMUtils@cbcommons`
 - `QueryHelper@cbcommons`
 - `Zip@cbcommons`
+- `Utilities@cbcommons`
