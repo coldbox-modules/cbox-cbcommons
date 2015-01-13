@@ -3,7 +3,7 @@
 	<!-- Version: UPDATE ON EACH RELEASE AS NEEDED -->
 	<property name="project.name" 		value="cbcommons" />
 	<property name="module.name" 		value="cbcommons" />
-	<property name="project.version" 	value="1.1.0"/>
+	<property name="project.version" 	value="1.1.1"/>
 	<property name="groupID" 			value="ortussolutions" />
 	
 	<!-- Build Labels -->

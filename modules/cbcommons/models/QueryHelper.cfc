@@ -460,11 +460,13 @@ Description :
 				<cfif c gt 0>
 					<cfset line = line & ",">
 				</cfif>
-				<cfif findNoCase("date",col)>
+				<!--- Date Eval --->
+				<cfif isDate( replace(rptQry[col][i],delim,"","all") )>
 					<cfset line = line & DateFormat(replace(rptQry[col][i],delim,"","all"))>
 				<cfelse>
 					<cfset line = line & replace(rptQry[col][i],delim,"","all")>
 				</cfif>
+
 				<cfset c = c + 1>
 			</cfloop>
 			<cfset csv = csv & line & chr(13) & chr(10)>
