@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ColdBox/cbox-cbcommons.svg?branch=development)](https://travis-ci.org/ColdBox/cbox-cbcommons)
+
 # WELCOME TO THE CBCOMMONS MODULE
 A collection of model objects for your using pleasure:
 
