@@ -2,6 +2,8 @@
 
 ## 1.1.1
 * https://ortussolutions.atlassian.net/browse/CCM-16 query helper csv date evaluation instead of column assumptions
+* Build updates
+* Travis CI integration
 
 ## 1.1.0
 * Added the `Utilities` plugin

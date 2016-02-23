@@ -1,11 +1,11 @@
 {
 	"name" 		: "CBCommons",
-	"version"	: "1.1.1",
+	"version"	: "@version.number@",
 	"author" 	: "Luis Majano <lmajano@ortussolutions.com",
 	"slug"		: "cbcommons",
 	"type"		: "modules",
-	"homepage"	: "http://www.coldbox.org",
-	"documentation"		: "http://wiki.coldbox.org",
+	"homepage"	: "https://github.com/ColdBox/cbox-cbcommons",
+	"documentation"		: "https://github.com/ColdBox/cbox-cbcommons",
 	"repository"		: { "type" : "git", "url" : "https://github.com/ColdBox/cbox-cbcommons" },
 	"shortDescription"	: "A collection of some nice models to help with your CFML development",
 	"license"			: [ 
@@ -15,7 +15,15 @@
 		"Brad Wood <bdw429s@gmail.com>", "Curt Gratz <gratz@computerknowhow.com>"
 	],
 	"engines"	: [
-		{ "type" : "railo", "version" : ">4.1" },
+		{ "type" : "lucee", "version" : ">4.5" },
 		{ "type" : "adobe", "version" : ">9.02" }
-	]
+	],
+    "dependencies"  :{
+    },
+    "ignore":[
+        "**/.*",
+        "tests",
+        "apidocs",
+        "*/.md"
+    ]
 }

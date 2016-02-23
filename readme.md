@@ -15,8 +15,24 @@ Apache License, Version 2.0.
 - http://www.coldbox.org/forgebox/view/cbcommons
 
 ##SYSTEM REQUIREMENTS
-- Railo 4+
+- Lucee 4.5+
 - ColdFusion 9+
+
+
+#INSTRUCTIONS
+
+Just drop into your **modules** folder or use the box-cli to install
+
+`box install cbcommons`
+
+All model objects are autowired with a `@cbcommons` namespace.
+
+- `DateUtils@cbcommons`
+- `FileUtils@cbcommons`
+- `JVMUtils@cbcommons`
+- `QueryHelper@cbcommons`
+- `Zip@cbcommons`
+- `Utilities@cbcommons`
 
 ********************************************************************************
 Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
