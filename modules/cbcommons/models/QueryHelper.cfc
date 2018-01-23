@@ -247,8 +247,8 @@ Description :
         <cfargument name="OrderByElement"	type="string" required="false" default="" />
 		<cfargument name="CaseSensitive"	type="boolean" required="false" default="false" />
 		<cfscript>
-			var qry1 = arguments.qryLeft;
-		    var qry2 = arguments.qryRight;
+			var qry1 = duplicate(arguments.qryLeft);
+		    var qry2 = duplicate(arguments.qryRight);
 		    var lstRightColumns	= "";
 		    var lstLeftColumns	= "";
 		    var lstCols			= "";
