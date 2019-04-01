@@ -326,7 +326,7 @@ Description :
 		    }
 
 		 }catch(Any e){
-			throw("Error in doLeftOuterJoin():","#e.Detail#<br>#e.message#","QueryHelper.InvalidInnerJoinException");
+			throw("Error in doLeftOuterJoin():","#e.Detail#<br>#e.message#","QueryHelper.InvalidLeftOuterJoinException");
 		 }
 		</cfscript>
 
